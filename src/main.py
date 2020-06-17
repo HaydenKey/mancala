@@ -1,6 +1,6 @@
-from mancalaBoard import MancalaBoard
+from src import mancalaBoard
 
-board = MancalaBoard(4)
+board = mancalaBoard.MancalaBoard(4)
 board.print_board()
 player_one_turn = True
 
@@ -18,7 +18,7 @@ while not board.check_game_over():
 
     player_continue = board.move(user_input, player_one_turn)
 
-    if check_game_over():
+    if board.check_game_over():
         break
 
     if not player_continue:
